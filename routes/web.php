@@ -5,6 +5,10 @@ use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [WelcomeController::class,'welcome'])->name('welcome');
+
+//Simplified way of routing
+Route::resource('note', NoteController::class);
+//The comprehensive way of routing
 // Route::get('/note', [NoteController::class,'index'])->name('note.index');
 // Route::get('/note/create', [NoteController::class,'create'])->name('note.create');
 // Route::post('/note/{id}', [NoteController::class,'store'])->name('note.store');
@@ -13,4 +17,3 @@ Route::get('/', [WelcomeController::class,'welcome'])->name('welcome');
 // Route::put('/note/{id}', [NoteController::class,'update'])->name('note.update');
 // Route::delete('/note/{id}', [NoteController::class,'destroy'])->name('note.destroy');
 
-Route::resource('note', NoteController::class);
