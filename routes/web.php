@@ -1,11 +1,9 @@
 <?php
 
-use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\NoteController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [WelcomeController::class,'welcome'])->name('welcome');
 
 Route::redirect('/', '/note')->name('dashboard');
 
